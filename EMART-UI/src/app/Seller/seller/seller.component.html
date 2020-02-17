@@ -1,0 +1,20 @@
+<p>seller works!</p>
+<div class="header">
+    <div class="text-center">
+
+      <h2 text-align="center">WELCOME TO E-MART</h2>
+      </div>
+
+  <ul>
+      <li><a [routerLink]="['/home']">Home</a></li>
+      <li><a [routerLink]="['/seller/additems']">Buy Product</a></li>
+      <li><a [routerLink]="['/seller/viewitems']">View Cart</a></li>
+      <li><a [routerLink]="['/seller/viewreports']">Purchase History</a></li>
+      <li style="float:right">
+          <input type="search" placehoder="search"/>
+          <button class="btn btn-primary"type="submit" name="submit" [routerLink]="['/buyer/search']">search</button>
+      </li>
+      
+    </ul>
+  </div>
+<router-outlet></router-outlet>
