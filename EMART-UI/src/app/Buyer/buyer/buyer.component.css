@@ -1,31 +1,80 @@
-.header{
-    background-color: lightskyblue;
+
+#b{
+    background-image: url("src/assets/images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
 }
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color:lightskyblue;
-position: -webkit-sticky; /* Safari */
-position: sticky;
-top: 0;
+.navbar
+{
+  
+  
 }
-li {
-float: left;
+.navbar a{
+  color: white;
+}
+a:hover {
+  
+  background-color: white;
+  
+  }
+  .navbar a.active {
+  background-color: lightcoral;
+  } 
+.dropdownmenu
+{
+  background-color: black;
 }
 
-li a {
-display: block;
-color:white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
 
-li a:hover {
-background-color:black;
+
+/* .topnav{
+  
+  
+  overflow: hidden;
+  
 }
-.active {
-background-color: lightcoral;
+.topnav a{
+  padding: 10px 16px;
+  color: red;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  
 }
+.topnav  a:hover {
+  background-color:lightcoral;
+  text-align: center;
+  }
+  .topnav .active {
+  background-color: lightcoral;
+  } 
+  @media screen and (min-width:300px) {
+    .topnav  {
+      float: none;
+    }
+  }
+   #a{
+    float: right;
+    align-items: center;
+  }
+  .topnav  input[type=text] {
+    
+    margin-top: 8px;
+    border: none;
+    overflow: hidden;
+    align-items: center;
+    
+  
+  }
+  .topnav  button {
+  
+     
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    
+  } */

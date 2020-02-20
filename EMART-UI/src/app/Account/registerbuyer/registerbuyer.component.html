@@ -1,11 +1,13 @@
 
 <body>
-<div class="card m-3">
-    
+    <br>
+    <br>
+    <div class="container card col-md-4">
+
     <div class="card-body">
         <form [formGroup]="registerForm" (ngSubmit)="onsubmit()">
            
-                <div class="form-group col-5">
+                <div class="form-group ">
                     <label>Id</label>
                     <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submit && f.id.errors }" />
                     <div *ngIf="submit && f.id.errors" class="invalid-feedback">
@@ -14,7 +16,7 @@
                     </div>
                 </div>
                 
-                <div class="form-group col-5">
+                <div class="form-group">
                     <label>User Name</label>
                     <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submit && f.name.errors }" />
                     <div *ngIf="submit && f.name.errors" class="invalid-feedback">
@@ -22,7 +24,7 @@
                         <div *ngIf="f.name.errors.pattern">Enter only alphabets</div>
                     </div>
                 </div>
-                <div class="form-group col-5">
+                <div class="form-group">
                     <label>Created Date</label>
                     <input type="date" formControlName="cdate" class="form-control" [ngClass]="{ 'is-invalid': submit && f.cdate.errors }" />
                     <div *ngIf="submit && f.cdate.errors" class="invalid-feedback">
@@ -31,7 +33,7 @@
                 </div>
     
             
-            <div class="form-group col-5">
+            <div class="form-group">
                 <label>Mobile</label>
                 <input type="text" value="+91" readonly size="1"/>
                 <input type="text" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submit && f.mobile.errors }" />
@@ -40,7 +42,7 @@
                     <div *ngIf="f.mobile.errors.pattern">Mobile no Must be Valid</div>
                 </div>
             </div>
-            <div class="form-group col-5">
+            <div class="form-group">
                 <label>Email</label>
                 <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submit && f.email.errors }" />
                 <div *ngIf="submit && f.email.errors" class="invalid-feedback">
@@ -48,7 +50,7 @@
                     <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
                 </div>
             </div>
-                <div class="form-group col-5">
+                <div class="form-group">
                     <label>Password</label>
                     <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submit && f.password.errors }" />
                     <div *ngIf="submit && f.password.errors" class="invalid-feedback">
@@ -64,4 +66,5 @@
         </form>
     </div>
 </div>
+
 </body>
