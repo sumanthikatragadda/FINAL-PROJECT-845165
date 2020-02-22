@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Emart.AccountService.Models
+{
+    public partial class Seller
+    {
+        public Seller()
+        {
+            PurchaseHistory = new HashSet<PurchaseHistory>();
+        }
+
+        public int Id { get; set; }
+        public string Usename { get; set; }
+        public string Password { get; set; }
+        public string Companyname { get; set; }
+        public string Gstin { get; set; }
+        public string Briefaboutcompany { get; set; }
+        public string PostalAddress { get; set; }
+        public string Website { get; set; }
+        public string Emailid { get; set; }
+        public int Contactnumber { get; set; }
+
+        public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }
+    }
+}

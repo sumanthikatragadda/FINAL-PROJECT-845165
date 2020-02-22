@@ -1,31 +1,23 @@
-/* .header{
-    background-color: lightskyblue;
-}
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color:lightskyblue;
-position: -webkit-sticky;
-position: sticky;
-top: 0;
-}
-li {
-float: left;
-}
+.card{
+    background-color: grey;
+    opacity: 1px;
 
-li a {
-display: block;
-color:white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+    margin: 0 auto; /* Added */
+      float: none; /* Added */
+      margin-bottom: 10px; 
+      
+      align-items: center;
+    
 }
-
-li a:hover {
-background-color:black;
+.container{
+    align-items: center;
 }
-.active {
-background-color: lightcoral;
-}  */
+.btn
+{
+    align-items: center;
+}
+@media (min-width: 300px) { 
+   .card{
+       width:100%;
+   }
+ }
