@@ -15,7 +15,7 @@ namespace Emart.AccountService.Repositories
         }
         public bool BuyerLogin(string uname, string pwd)
         {
-            Buyer b= _context.Buyer.SingleOrDefault(e=>e.Username==uname&&e.Password==pwd);
+            var b= _context.Buyer.SingleOrDefault(e=>e.Username==uname&&e.Password==pwd);
             if(b!=null)
             {
                 return true;
