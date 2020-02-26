@@ -28,7 +28,7 @@ namespace Emart.AccountService.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-9MSG4MJ\\SQLEXPRESS;Initial Catalog=EmartDB;Persist Security Info=True;User ID=SA;Password=pass@word1");
             }
         }
@@ -260,9 +260,9 @@ namespace Emart.AccountService.Models
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Usename)
+                entity.Property(e => e.Username)
                     .IsRequired()
-                    .HasColumnName("usename")
+                    .HasColumnName("username")
                     .HasMaxLength(20)
                     .IsUnicode(false);
 

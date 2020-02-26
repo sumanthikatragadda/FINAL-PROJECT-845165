@@ -49,7 +49,7 @@ namespace Emart.AccountService.Repositories
 
         public bool SellerLogin(string uname, string pwd)
         {
-            Seller b = _context.Seller.SingleOrDefault(e => e.Usename == uname && e.Password == pwd);
+            Seller b = _context.Seller.SingleOrDefault(e => e.Username == uname && e.Password == pwd);
             if (b != null)
             {
                 return true;
