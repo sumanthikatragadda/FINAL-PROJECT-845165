@@ -49,7 +49,7 @@
           "Port": 63001
         }
       ],
-      "UpstreamPathTemplate": "/Buyer/Item/{catchAll}"
+      "UpstreamPathTemplate": "/BuyerItem/{catchAll}"
     },
     //buyer
     {
@@ -61,7 +61,7 @@
           "Port": 63001
         }
       ],
-      "UpstreamPathTemplate": "/Buyer/Transaction/{catchAll}"
+      "UpstreamPathTemplate": "/BuyerTransaction/{catchAll}"
     },
     //buyer
     {
@@ -73,7 +73,7 @@
           "Port": 63001
         }
       ],
-      "UpstreamPathTemplate": "/Buyer/Category/{catchAll}"
+      "UpstreamPathTemplate": "/BuyerCategory/{catchAll}"
     },
     //seller
     {
@@ -97,7 +97,7 @@
           "Port": 63002
         }
       ],
-      "UpstreamPathTemplate": "/Seller/Item/{catchAll}"
+      "UpstreamPathTemplate": "/SellerItem/{catchAll}"
     }
 
   ],

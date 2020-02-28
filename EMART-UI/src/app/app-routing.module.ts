@@ -19,20 +19,27 @@ import { LoginComponent } from './Account/login/login.component';
 import { RegisterbuyerComponent } from './Account/registerbuyer/registerbuyer.component';
 import { RegistersellerComponent } from './Account/registerseller/registerseller.component';
 import { HomeComponent } from './Account/home/home.component';
-
-
+import { ViewProfileComponent } from './Buyer/view-profile/view-profile.component';
+import { EditProfileComponent } from './Buyer/edit-profile/edit-profile.component';
+import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-seller-profile.component';
+import { EditSellerProfileComponent } from './Seller/edit-seller-profile/edit-seller-profile.component';
 
 const routes: Routes = [
   {path:'buyer',component:BuyerComponent,children:[
     {path:'buyproduct',component:BuyproductComponent},
     {path:'purchasehistory',component:PurchasehistoryComponent},
     {path:'search',component:SearchComponent},
-    {path:'viewcart',component:ViewcartComponent}
+    {path:'viewcart',component:ViewcartComponent},
+    {path:'view-profile',component:ViewProfileComponent},
+    {path:'editprofile',component:EditProfileComponent}
   ]},
   {path:'seller',component:SellerComponent,children:[
     {path:'additems',component:AdditemsComponent},
     {path:'viewitems',component:ViewitemsComponent},
-    {path:'viewreports',component:ViewreportsComponent}
+    {path:'viewreports',component:ViewreportsComponent},
+    {path:'view-profile',component:ViewProfileComponent},
+    {path:'view-seller-profile',component:ViewSellerProfileComponent},
+    {path:'edit-seller-profile',component:EditSellerProfileComponent}
   ]},
   {path:'admin',component:AdminComponent,children:[
     {path:'addcategory',component:AddcategoryComponent},

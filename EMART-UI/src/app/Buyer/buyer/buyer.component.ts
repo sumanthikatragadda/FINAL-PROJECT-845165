@@ -11,5 +11,8 @@ export class BuyerComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  Search()
+  {
+    
+  }
 }

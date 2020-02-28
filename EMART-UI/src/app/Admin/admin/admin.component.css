@@ -1,0 +1,26 @@
+#b{
+    background-image: url("src/assets/images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+  .dropdown-menu
+  {
+  background-color: black;
+  
+  }
+  .navbar a{
+  color: white;
+  }
+  a:hover {
+  
+  background: transparent;
+  
+  }
+  .navbar a.active {
+  background-color: lightcoral;
+  } 
+  
+  
+  

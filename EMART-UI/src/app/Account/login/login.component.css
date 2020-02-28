@@ -1,14 +1,4 @@
-.card{
-    background-color: grey;
-    opacity: 1px;
 
-    margin: 0 auto; /* Added */
-      float: none; /* Added */
-      margin-bottom: 10px; 
-      
-      align-items: center;
-    
-}
 .container{
     align-items: center;
 }
@@ -21,3 +11,14 @@
        width:100%;
    }
  }
+ .card{
+    opacity: 0.5px;
+    background: transparent;
+    
+    margin: 0 auto; /* Added */
+      float: none; /* Added */
+      margin-bottom: 10px; 
+}
+body{
+    height: auto;
+}

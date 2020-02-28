@@ -1,1 +1,36 @@
-<p>addcategory works!</p>
+<br>
+<br>
+<br>
+
+<div class="card" style="width: 25rem;"> 
+
+    <form class=" border border-light p-5" [formGroup]="addcategoryform" (ngSubmit)="onSubmit()">
+        
+                <label>Category ID</label>
+                <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
+                   <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
+                    <div *ngIf="f.categoryid.errors.required">ID is required</div>
+                </div>
+       
+
+                <label>Category Name</label>
+                <input type="text" formControlName="categoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryname.errors }" />
+                <div *ngIf="submitted && f.categoryname.errors" class="invalid-feedback">
+                    <div *ngIf="f.categoryname.errors.required">Name is required</div>
+                    
+                </div>
+         
+    
+                <label>Brief Details</label>
+                <input type="text" formControlName="briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.briefdetails.errors }" />
+                <div *ngIf="submitted && f.briefdetails.errors" class="invalid-feedback">
+                    <div *ngIf="f.briefdetails.errors.required">Brief Details is required</div>
+                </div>
+                <br>
+        
+        <div class="text-center">
+            <button class="btn btn-primary mr-1">Submit</button>
+            <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </form>
+</div>

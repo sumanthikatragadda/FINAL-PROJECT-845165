@@ -1,1 +1,27 @@
-<p>viewitems works!</p>
+
+<table class="table table-bordered" style="background-color:white">
+    <tr>
+        <th>Item Id</th>
+        <th>Price</th>
+        <th>ItemName</th>
+        <th>Description</th>
+        <th>StockNumber</th>
+        <th>Remarks</th>
+        <th>Category Id</th>
+        <th>SubCategory Id</th>
+        <th>Edit</th>
+        <th>Delete</th>
+     </tr>
+    <tr *ngFor="let item of list">
+       <td>{{item.id}}</td>
+       <td>{{item.price}}</td>
+       <td>{{item.itemName}}</td>
+       <td>{{item.description}}</td>
+       <td>{{item.stockNumber}}</td>
+       <td>{{item.remarks}}</td>
+       <td>{{item.categoryId}}</td>
+       <td>{{item.subcategoryId}}</td>
+       <td><button class="btn btn-primary mr-1" (click)="Update()" type="button">Update</button></td>
+       <td><button class="btn btn-primary mr-1"  type="button" (click)="Delete(item.id)">Delete</button></td>
+    </tr>
+</table>

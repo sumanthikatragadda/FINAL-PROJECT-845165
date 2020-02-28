@@ -8,6 +8,7 @@ namespace Emart.SellerService.Repositories
 {
     public interface IItemRepository
     {
+        List<Items> GetAllItems();
         List<Items> ViewItems(int sid);
         public void DeleteItems(int id);
         public void UpdateItems(Items obj);

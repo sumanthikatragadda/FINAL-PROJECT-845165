@@ -12,7 +12,7 @@ namespace Emart.SellerService.Models
         }
 
         public int Id { get; set; }
-        public string Usename { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
         public string Companyname { get; set; }
         public string Gstin { get; set; }

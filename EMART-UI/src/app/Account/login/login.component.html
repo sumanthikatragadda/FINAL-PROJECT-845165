@@ -4,7 +4,7 @@
 <br>
 <br>
 
-<div class="col-sm-4">
+<!-- <div class="col-sm-4">
 <div class="card">
     <form [formGroup]="LoginForm">
   
@@ -24,6 +24,19 @@
     </form>
     </div>
 
-</div>
+</div> -->
 
-        
+<div class="card" style="width: 25rem;">
+<form class="text-center border border-light p-5" [formGroup]="sellerform" (ngSubmit)="onsubmit()">
+
+  <p class="h4 mb-4">Sign in</p>
+
+  <!-- Email -->
+  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Password -->
+  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+  <button class=" btn btn-primary" type="submit">Sign in</button>
+
+</form>   
+</div>    

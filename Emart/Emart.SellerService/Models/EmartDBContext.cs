@@ -260,9 +260,9 @@ namespace Emart.SellerService.Models
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Usename)
+                entity.Property(e => e.Username)
                     .IsRequired()
-                    .HasColumnName("usename")
+                    .HasColumnName("username")
                     .HasMaxLength(20)
                     .IsUnicode(false);
 

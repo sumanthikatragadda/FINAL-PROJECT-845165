@@ -1,31 +1,26 @@
-.header{
-    background-color: lightskyblue;
-}
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color:lightskyblue;
-position: -webkit-sticky; /* Safari */
-position: sticky;
-top: 0;
-}
-li {
-float: left;
-}
-
-li a {
-display: block;
-color:white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-
-li a:hover {
-background-color:black;
-}
-.active {
-background-color: lightcoral;
-}
+#b{
+    background-image: url("src/assets/images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+  .dropdown-menu
+  {
+  background-color: black;
+  
+  }
+  .navbar a{
+  color: white;
+  }
+  a:hover {
+  
+  background: transparent;
+  
+  }
+  .navbar a.active {
+  background-color: lightcoral;
+  } 
+  
+  
+  

@@ -26,6 +26,11 @@ namespace Emart.SellerService.Repositories
             _context.SaveChanges();
         }
 
+        public List<Items> GetAllItems()
+        {
+            return _context.Items.ToList();
+        }
+
         public Items GetItems(int id)
         {
             return _context.Items.Find(id);

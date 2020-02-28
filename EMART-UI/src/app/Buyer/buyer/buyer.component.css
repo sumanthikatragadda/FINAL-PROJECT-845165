@@ -1,80 +1,25 @@
-
 #b{
-    background-image: url("src/assets/images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
+  background-image: url("src/assets/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
-.navbar
+.dropdown-menu
 {
-  
-  
+background-color: black;
+
 }
 .navbar a{
-  color: white;
+color: white;
 }
 a:hover {
-  
-  background-color: white;
-  
-  }
-  .navbar a.active {
-  background-color: lightcoral;
-  } 
-.dropdownmenu
-{
-  background-color: black;
+
+background: transparent;
+
 }
+.navbar a.active {
+background-color: lightcoral;
+} 
 
 
-
-/* .topnav{
-  
-  
-  overflow: hidden;
-  
-}
-.topnav a{
-  padding: 10px 16px;
-  color: red;
-  text-decoration: none;
-  text-align: center;
-  align-items: center;
-  
-}
-.topnav  a:hover {
-  background-color:lightcoral;
-  text-align: center;
-  }
-  .topnav .active {
-  background-color: lightcoral;
-  } 
-  @media screen and (min-width:300px) {
-    .topnav  {
-      float: none;
-    }
-  }
-   #a{
-    float: right;
-    align-items: center;
-  }
-  .topnav  input[type=text] {
-    
-    margin-top: 8px;
-    border: none;
-    overflow: hidden;
-    align-items: center;
-    
-  
-  }
-  .topnav  button {
-  
-     
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    border: none;
-    cursor: pointer;
-    
-  } */

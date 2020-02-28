@@ -25,6 +25,10 @@ import { AddsubcategoryComponent } from './Admin/addsubcategory/addsubcategory.c
 import { DailyreportsComponent } from './Admin/dailyreports/dailyreports.component';
 import { from } from 'rxjs';
 import { HomeComponent } from './Account/home/home.component';
+import { ViewProfileComponent } from './Buyer/view-profile/view-profile.component';
+import { EditProfileComponent } from './Buyer/edit-profile/edit-profile.component';
+import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-seller-profile.component';
+import { EditSellerProfileComponent } from './Seller/edit-seller-profile/edit-seller-profile.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,11 @@ import { HomeComponent } from './Account/home/home.component';
     AddcategoryComponent,
     AddsubcategoryComponent,
     DailyreportsComponent,
-    HomeComponent
+    HomeComponent,
+    ViewProfileComponent,
+    EditProfileComponent,
+    ViewSellerProfileComponent,
+    EditSellerProfileComponent
   ],
   imports: [
     BrowserModule,

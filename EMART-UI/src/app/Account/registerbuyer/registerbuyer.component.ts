@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Buyer } from 'src/app/Models/buyer';
-import { AccountService } from 'src/app/Sevices/account.service';
+import { AccountService } from 'src/app/Services/account.service';
 
 @Component({
   selector: 'app-registerbuyer',

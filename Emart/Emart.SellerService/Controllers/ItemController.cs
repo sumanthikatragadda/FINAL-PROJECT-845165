@@ -29,6 +29,19 @@ namespace Emart.SellerService.Controllers
             }
             catch (Exception ex)
             {
+                return NotFound(ex.InnerException.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllItems")]
+        public IActionResult GetAllItems()
+        {
+            try
+            {
+                return Ok(_repo.GetAllItems());
+            }
+            catch (Exception ex)
+            {
                 return NotFound(ex.Message);
             }
         }
@@ -56,7 +69,7 @@ namespace Emart.SellerService.Controllers
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
             }
         }
         [HttpPut]

@@ -1,1 +1,73 @@
-<p>additems works!</p>
+
+<div class="card" style="width: 25rem;"> 
+
+    <form class=" border border-light p-5" [formGroup]="additemsform" (ngSubmit)="onSubmit()">
+        
+                <label>ID</label>
+                <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }">
+                   <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                    <div *ngIf="f.id.errors.required">ID is required</div>
+                </div>
+       
+
+                <label>Item Name</label>
+                <input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
+                <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
+                    <div *ngIf="f.itemname.errors.required">Name is required</div>
+                    
+                </div>
+         
+    
+                <label>Price</label>
+                <input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                    <div *ngIf="f.price.errors.required">Brief Details is required</div>
+                </div>
+                <label>Description</label>
+                <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+                   <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">ID is required</div>
+                </div>
+       
+
+                <label>Stock Number</label>
+                <input type="number" formControlName="stocknumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stocknumber.errors }" />
+                <div *ngIf="submitted && f.stocknumber.errors" class="invalid-feedback">
+                    <div *ngIf="f.stocknumber.errors.required">Name is required</div>
+                    
+                </div>
+         
+    
+                <label>Remarks</label>
+                <input type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" />
+                <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+                    <div *ngIf="f.remarks.errors.required">Brief Details is required</div>
+                </div>
+                <label>Category Id</label>
+                <input type="number" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
+                   <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
+                    <div *ngIf="f.categoryid.errors.required">ID is required</div>
+                </div>
+       
+
+                <label>SubCategory Id</label>
+                <input type="number" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
+                <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
+                    <div *ngIf="f.subcategoryid.errors.required">Name is required</div>
+                    
+                </div>
+         
+    
+                <label>Seller Id</label>
+                <input type="number" formControlName="sellerid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sellerid.errors }" />
+                <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
+                    <div *ngIf="f.sellerid.errors.required">Brief Details is required</div>
+                </div>
+                <br>
+        
+        <div class="text-center">
+            <button class="btn btn-primary mr-1">Submit</button>
+            <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </form>
+</div>   

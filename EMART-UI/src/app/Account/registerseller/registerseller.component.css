@@ -1,6 +1,6 @@
 .card{
     opacity: 0.5px;
-    background: transparent;
+    background-color: grey;
     
     margin: 0 auto; /* Added */
       float: none; /* Added */

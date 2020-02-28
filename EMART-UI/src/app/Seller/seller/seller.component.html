@@ -1,20 +1,51 @@
-<p>seller works!</p>
-<div class="header">
-    <div class="text-center">
 
-      <h2 text-align="center">WELCOME TO E-MART</h2>
-      </div>
 
-  <ul>
-      <li><a [routerLink]="['/home']">Home</a></li>
-      <li><a [routerLink]="['/seller/additems']">Buy Product</a></li>
-      <li><a [routerLink]="['/seller/viewitems']">View Cart</a></li>
-      <li><a [routerLink]="['/seller/viewreports']">Purchase History</a></li>
-      <li style="float:right">
-          <input type="search" placehoder="search"/>
-          <button class="btn btn-primary"type="submit" name="submit" [routerLink]="['/buyer/search']">search</button>
-      </li>
-      
-    </ul>
-  </div>
+
+   
+ <header>
+  <!-- <div class="text-center">
+
+    <h2 text-align="center">WELCOME TO E-MART</h2>
+ </div>  -->
+
+ 
+ <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item">
+         <a class="nav-link" [routerLink]="['/home']">Home</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" [routerLink]="['/seller/additems']">Add Items</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" [routerLink]="['/seller/viewitems']">View Items</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" [routerLink]="['/seller/viewreports']">View Reports</a>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+           Account
+         </a>
+         <div class="dropdown-menu">
+           <a class="dropdown-item" [routerLink]="['/buyer/view-profile']">View Profile</a>
+           <a class="dropdown-item" [routerLink]="['/buyer']">Logout</a>
+         </div>
+       </li>
+       </ul>
+   </div>
+       <div>
+         <input type="search" placeholder="Search" aria-label="Search">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="Search()">Search</button>
+       </div>  
+ </nav> 
+</header>
 <router-outlet></router-outlet>
+
+
+
