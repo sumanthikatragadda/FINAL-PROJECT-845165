@@ -24,7 +24,7 @@ export class RegisterbuyerComponent implements OnInit {
        createddatetime:['',Validators.required],
        mobilenumber:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]],
        emailid:['',[Validators.required,Validators.email]],
-       password:['',[Validators.required]]
+       password:['',Validators.required]
         });
             
   }
@@ -37,11 +37,12 @@ export class RegisterbuyerComponent implements OnInit {
     this.submit=true;
     if(this.registerForm.valid)
     {
+      this.AddBuyer();
     alert("form is validated");
     
     console.log(JSON.stringify(this.registerForm.value))
     }
-    this.AddBuyer();
+    
   }
   // onreset()
   // {

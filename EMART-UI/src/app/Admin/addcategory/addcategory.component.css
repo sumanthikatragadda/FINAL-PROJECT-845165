@@ -1,6 +1,6 @@
 .card{
     opacity: 0.5px;
-    background:transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     margin: 0 auto; /* Added */
       float: none; /* Added */
       margin-bottom: 10px; 
@@ -8,4 +8,8 @@
 body
 {
     height:100%;
+}
+label
+{
+    color: white;
 }

@@ -19,7 +19,7 @@ export class AddsubcategoryComponent implements OnInit {
   ngOnInit() 
   {
     this.addsubcategoryform=this.formbuilder.group({
-      subcategoryid:['',Validators.required],
+
       subcategoryname:['',Validators.required],
       categoryid:['',Validators.required],
       GST:['',Validators.required],
@@ -47,7 +47,7 @@ export class AddsubcategoryComponent implements OnInit {
   Add()
   {
      this.item=new SubCategory();
-     this.item.subcategoryid=Number(this.addsubcategoryform.value["subcategoryid"]);
+     this.item.categoryid=Math.round(Math.random()*100);
      this.item.subcategoryname=this.addsubcategoryform.value["subcategoryname"];
      this.item.briefdetails=this.addsubcategoryform.value["briefdetails"];
      this.item.GST=this.addsubcategoryform.value["GST"];

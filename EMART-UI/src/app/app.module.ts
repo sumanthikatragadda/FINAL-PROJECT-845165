@@ -29,6 +29,8 @@ import { ViewProfileComponent } from './Buyer/view-profile/view-profile.componen
 import { EditProfileComponent } from './Buyer/edit-profile/edit-profile.component';
 import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-seller-profile.component';
 import { EditSellerProfileComponent } from './Seller/edit-seller-profile/edit-seller-profile.component';
+import { ViewCategoryComponent } from './Admin/view-category/view-category.component';
+import { ViewSubCategoryComponent } from './Admin/view-sub-category/view-sub-category.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { EditSellerProfileComponent } from './Seller/edit-seller-profile/edit-se
     ViewProfileComponent,
     EditProfileComponent,
     ViewSellerProfileComponent,
-    EditSellerProfileComponent
+    EditSellerProfileComponent,
+    ViewCategoryComponent,
+    ViewSubCategoryComponent
   ],
   imports: [
     BrowserModule,

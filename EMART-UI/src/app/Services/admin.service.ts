@@ -24,4 +24,22 @@ url:string='http://localhost:63000/Admin/'
     return this.http.post<any>(this.url+'AddSubCategory',JSON.stringify(item),Requestheaders);
     
   }
+  public GetAllCategories():Observable<Category[]>
+  {
+    return this.http.get<Category[]>(this.url+'GetCategories');
+  }
+  public DeleteCategory(id:any):Observable<any>
+  {
+    return this.http.delete<any>(this.url+'DeleteCat/'+id,Requestheaders);
+    
+  }
+  public GetAllSubCategories():Observable<SubCategory[]>
+  {
+    return this.http.get<SubCategory[]>(this.url+'GetSubCategories');
+  }
+  public DeleteSubCategory(id:any):Observable<any>
+  {
+    return this.http.delete<any>(this.url+'DeleteSub/'+id,Requestheaders);
+    
+  }
 }

@@ -40,11 +40,12 @@ export class RegistersellerComponent implements OnInit{
     this.submit=true;
     if(this.sellerform.valid)
     {
+      this.AddSeller();
     alert("form is validated");
     
     console.log(JSON.stringify(this.sellerform.value))
     }
-    this.AddSeller();
+    
   }
   // onreset()
   // {

@@ -13,12 +13,14 @@ export class AddcategoryComponent implements OnInit {
   submitted=false;
   list1:Category[];
   item:Category;
+
+
   constructor(private formbuilder:FormBuilder,private service:AdminService) { }
 
   ngOnInit() 
   {
     this.addcategoryform=this.formbuilder.group({
-      categoryid:['',Validators.required],
+      
       categoryname:['',Validators.required],
       briefdetails:['',Validators.required],
     })
@@ -27,10 +29,11 @@ export class AddcategoryComponent implements OnInit {
   onSubmit()
   {
     this.submitted= true;
-    this.Add();
+    //this.Add();
     //display form value on success
     if(this.addcategoryform.valid)
     {
+      this.Add();
       alert("Success")
       console.log(JSON.stringify(this.addcategoryform.value));
       
@@ -44,7 +47,7 @@ export class AddcategoryComponent implements OnInit {
   Add()
   {
      this.item=new Category();
-     this.item.categoryid=Number(this.addcategoryform.value["categoryid"]);
+     this.item.categoryid=Math.round(Math.random()*100);
      this.item.categoryname=this.addcategoryform.value["categoryname"];
      this.item.briefdetails=this.addcategoryform.value["briefdetails"];
      this.service.AddCategory(this.item).subscribe(res=>{

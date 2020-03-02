@@ -29,7 +29,7 @@ namespace Emart.AccountService.Controllers
                 }
                 catch (Exception ex)
                 {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
                 }
            }
         [HttpPost]

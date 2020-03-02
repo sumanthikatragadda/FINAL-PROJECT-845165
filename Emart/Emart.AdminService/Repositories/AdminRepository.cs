@@ -27,5 +27,40 @@ namespace Emart.AdminService.Repositories
 
         }
 
+        public void DeleteCategory(int id)
+        {
+            Category i = _context.Category.Find(id);
+            _context.Remove(i);
+            _context.SaveChanges();
+        }
+
+        public void DeleteSubcategory(int id)
+        {
+            SubCategory i = _context.SubCategory.Find(id);
+            _context.Remove(i);
+            _context.SaveChanges();
+        }
+
+        public List<Category> GetCategories()
+        {
+            return _context.Category.ToList();
+        }
+
+        public List<SubCategory> GetSubCategories()
+        {
+            return _context.SubCategory.ToList();
+        }
+
+        public void UpdateCategory(Category obj)
+        {
+            _context.Category.Update(obj);
+            _context.SaveChanges();
+        }
+
+        public void UpdateSubcategory(SubCategory obj)
+        {
+            _context.SubCategory.Update(obj);
+            _context.SaveChanges();
+        }
     }
 }

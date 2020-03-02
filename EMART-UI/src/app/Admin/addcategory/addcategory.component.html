@@ -6,12 +6,12 @@
 
     <form class=" border border-light p-5" [formGroup]="addcategoryform" (ngSubmit)="onSubmit()">
         
-                <label>Category ID</label>
+                <!-- <label>Category ID</label>
                 <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
                    <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
                     <div *ngIf="f.categoryid.errors.required">ID is required</div>
                 </div>
-       
+        -->
 
                 <label>Category Name</label>
                 <input type="text" formControlName="categoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryname.errors }" />
