@@ -4,4 +4,5 @@ export class SubCategory {
     GST:string;
     categoryid:number;
     briefdetails:string;
+    
 }

@@ -14,10 +14,9 @@
  .card{
     opacity: 0.5px;
     background-color: rgba(0, 0, 0, 0.5);
-    
-    margin: 0 auto; /* Added */
-      float: none; /* Added */
-      margin-bottom: 10px; 
+    margin: 0 auto;
+    float: none; 
+    margin-bottom: 10px; 
 }
 body{
     height: auto;

@@ -46,9 +46,19 @@ namespace Emart.AdminService.Repositories
             return _context.Category.ToList();
         }
 
+        public Category GetCategoryId(int id)
+        {
+            return _context.Category.Find(id);
+        }
+
         public List<SubCategory> GetSubCategories()
         {
             return _context.SubCategory.ToList();
+        }
+
+        public SubCategory GetSubCategoryId(int id)
+        {
+            return _context.SubCategory.Find(id);
         }
 
         public void UpdateCategory(Category obj)

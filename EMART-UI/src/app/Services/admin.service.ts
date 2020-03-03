@@ -42,4 +42,12 @@ url:string='http://localhost:63000/Admin/'
     return this.http.delete<any>(this.url+'DeleteSub/'+id,Requestheaders);
     
   }
+  public GetCategoryId(id:any):Observable<Category[]>
+  {
+    return this.http.get<Category[]>(this.url+'GetCategory/'+id,Requestheaders);
+  }
+  public GetSubCategoryId(id:any):Observable<Category[]>
+  {
+    return this.http.get<Category[]>(this.url+'GetSubCategory/'+id,Requestheaders);
+  }
 }

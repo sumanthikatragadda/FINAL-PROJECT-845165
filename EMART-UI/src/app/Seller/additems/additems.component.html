@@ -3,13 +3,6 @@
 
     <form class=" border border-light p-5" [formGroup]="additemsform" (ngSubmit)="onSubmit()">
         
-                <label>ID</label>
-                <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }">
-                   <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
-                    <div *ngIf="f.id.errors.required">ID is required</div>
-                </div>
-       
-
                 <label>Item Name</label>
                 <input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
                 <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
@@ -43,26 +36,20 @@
                 <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
                     <div *ngIf="f.remarks.errors.required">Brief Details is required</div>
                 </div>
-                <label>Category Id</label>
-                <input type="number" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
-                   <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
-                    <div *ngIf="f.categoryid.errors.required">ID is required</div>
-                </div>
-       
+                <label> Choose Category</label>
+                <select formControlName="categoryid" class="form-control" (change)="GetSubCategory()">
+                    <option *ngFor="let item of clist" value="{{item.categoryId}}">{{item.categoryName}}</option>   
+               </select>
+                <div class="form-group">
+                    <label>Choose SubCategory</label>
 
-                <label>SubCategory Id</label>
-                <input type="number" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
-                <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
-                    <div *ngIf="f.subcategoryid.errors.required">Name is required</div>
                     
+                    <select formControlName="subcategoryid" class="form-control">
+                        <option *ngFor="let item1 of sblist" value="{{item1.subcategoryId}}">{{item1.subcategoryName}}</option>   
+                   </select>
                 </div>
          
     
-                <label>Seller Id</label>
-                <input type="number" formControlName="sellerid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sellerid.errors }" />
-                <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
-                    <div *ngIf="f.sellerid.errors.required">Brief Details is required</div>
-                </div>
                 <br>
         
         <div class="text-center">

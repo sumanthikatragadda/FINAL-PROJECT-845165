@@ -31,9 +31,19 @@ namespace Emart.SellerService.Repositories
             return _context.Items.ToList();
         }
 
+        public List<Category> GetCategories()
+        {
+            return _context.Category.ToList();
+        }
+
         public Items GetItems(int id)
         {
             return _context.Items.Find(id);
+        }
+
+        public List<SubCategory> GetSubCategories(int categoryid)
+        {
+            return _context.SubCategory.Where(e => e.CategoryId == categoryid).ToList();
         }
 
         public void UpdateItems(Items obj)

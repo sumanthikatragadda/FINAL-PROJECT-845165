@@ -14,5 +14,7 @@ namespace Emart.SellerService.Repositories
         public void UpdateItems(Items obj);
         public Items GetItems(int id);
         public void AddItems(Items obj);
+        List<Category> GetCategories();
+        List<SubCategory> GetSubCategories(int categoryid);
     }
 }

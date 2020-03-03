@@ -112,6 +112,31 @@ namespace Emart.AdminService.Controllers
                 return NotFound(ex.Message);
             }
         }
-
+        [HttpGet]
+        [Route("GetCategory/{id}")]
+        public IActionResult GetCategory(int id)
+        {
+            try
+            {
+                return Ok(_repo.GetCategoryId(id));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetSubCategory/{id}")]
+        public IActionResult GetSubCategory(int id)
+        {
+            try
+            {
+                return Ok(_repo.GetSubCategoryId(id));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
     }
 }

@@ -6,7 +6,6 @@
       float: none; /* Added */
       margin-bottom: 10px; 
 }
-body
-{
-    height:auto;
+body{
+    height: 100%;
 }
