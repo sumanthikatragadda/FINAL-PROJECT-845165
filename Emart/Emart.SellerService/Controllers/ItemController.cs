@@ -100,7 +100,7 @@ namespace Emart.SellerService.Controllers
             }
         }
         [HttpGet]
-        [Route("GetCategories")]
+        [Route("GetCategoriesId")]
         public IActionResult GetAllCategories()
         {
             try

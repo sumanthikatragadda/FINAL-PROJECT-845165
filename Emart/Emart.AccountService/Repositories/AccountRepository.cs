@@ -13,17 +13,10 @@ namespace Emart.AccountService.Repositories
         {
             _context = context;
         }
-        public bool BuyerLogin(string uname, string pwd)
+        public Buyer BuyerLogin(string uname, string pwd)
         {
-            var b= _context.Buyer.SingleOrDefault(e=>e.Username==uname&&e.Password==pwd);
-            if(b!=null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return _context.Buyer.SingleOrDefault(e=>e.Username==uname&&e.Password==pwd);
+            
             
         }
         public List<Buyer> GetAllBuyer()
@@ -47,17 +40,12 @@ namespace Emart.AccountService.Repositories
             _context.SaveChanges();
         }
 
-        public bool SellerLogin(string uname, string pwd)
+        public Seller SellerLogin(string uname, string pwd)
         {
-            Seller b = _context.Seller.SingleOrDefault(e => e.Username == uname && e.Password == pwd);
-            if (b != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (_context.Seller.SingleOrDefault(e => e.Username == uname && e.Password == pwd));
+            
         }
+
+        
     }
 }

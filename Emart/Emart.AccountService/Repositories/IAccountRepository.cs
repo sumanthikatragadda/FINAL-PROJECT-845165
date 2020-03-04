@@ -9,10 +9,10 @@ namespace Emart.AccountService.Repositories
     public interface IAccountRepository
     {
         
-        bool BuyerLogin(string uname, string pwd);
-        bool SellerLogin(string uname, string pwd);
-        void RegisterBuyer(Buyer obj);
-        void RegisterSeller(Seller obj);
+        public Buyer BuyerLogin(string uname, string pwd);
+        public Seller SellerLogin(string uname, string pwd);
+        public void RegisterBuyer(Buyer obj);
+        public void RegisterSeller(Seller obj);
 
     }
 }

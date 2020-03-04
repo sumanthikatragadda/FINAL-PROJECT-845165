@@ -2,7 +2,7 @@
 <br>
 <br>
 <br>
-<br>
+
 
 <!-- <div class="col-sm-4">
 <div class="card">
@@ -27,18 +27,31 @@
 </div> -->
 
 <div class="card" style="width: 25rem;">
-<form class="text-center border border-light p-5" [formGroup]="sellerform" (ngSubmit)="onsubmit()">
+ 
+   <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
 
-  <p class="h4 mb-4">Sign in</p>
+     <p class="h4 mb-4">Sign in</p>
 
-  <!-- Email -->
-  <input type="text"  class="form-control mb-4" placeholder="Username">
+         <!-- Email -->
+          <input type="text"  class="form-control mb-4" formControlName="username" placeholder="Username" [ngClass]="{ 'is-invalid': submit && f.username.errors }">
+          <div *ngIf="submit && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Name is required</div>
+          </div>
 
-  <!-- Password -->
-  <input type="text"  class="form-control mb-4" placeholder="Password">
-  <button class=" btn btn-primary" type="submit">Sign in</button>
-  <br>
- <p> New User?  Register!</p>
- <!-- <a [routerLink]="['/home/registerbuyer']" >RegisterBuyer</a>  -->
-</form>   
+          <!-- Password -->
+          <input type="text"  class="form-control mb-4" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submit && f.password.errors }">
+          <div *ngIf="submit && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+          <p>Login:</p>
+          <br>
+          Buyer<input type="radio" formControlName="role" value="buyer">
+          <br>
+          Seller<input type="radio" formControlName="role" value="seller">
+          <br>
+          Admin<input type="radio" formControlName="role" value="admin">
+         <br>
+         <button class=" btn btn-primary"type="submit">Sign in</button>
+         <p> New User?  Register!</p>
+  </form>   
 </div>    

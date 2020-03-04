@@ -33,7 +33,7 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" [routerLink]="['/buyer/view-profile']">View Profile</a>
-              <a class="dropdown-item" [routerLink]="['/buyer']">Logout</a>
+              <a class="dropdown-item" (onselect)="Logout()">Logout</a>
             </div>
           </li>
           </ul>

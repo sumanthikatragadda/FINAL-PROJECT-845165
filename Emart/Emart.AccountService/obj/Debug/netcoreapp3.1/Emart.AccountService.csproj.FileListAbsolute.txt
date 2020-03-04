@@ -120,4 +120,11 @@ D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp
 D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\FINAL-PROJECT-SUMANTHI-845165\Emart\Emart.AccountService\obj\Debug\netcoreapp3.1\Emart.AccountService.MvcApplicationPartsAssemblyInfo.cache

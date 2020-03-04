@@ -29,4 +29,12 @@ url:string='http://localhost:63000/Account/'
     return this.http.post<any>(this.url+'AddSeller',JSON.stringify(item),Requestheaders);
     
   }
+  public BuyerLogin(username:any,password:any):Observable<any>
+  {
+    return this.http.get<any>(this.url+'BuyerLogin/'+username+'/'+password);
+  }
+  public SellerLogin(username:any,password:any):Observable<any>
+  {
+    return this.http.get<any>(this.url+'SellerLogin/'+username+'/'+password);
+  }
 }

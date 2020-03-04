@@ -1,7 +1,5 @@
 
-.container{
-    align-items: center;
-}
+
 .btn
 {
     align-items: center;
@@ -15,6 +13,7 @@
     opacity: 0.5px;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0 auto;
+    color: white;
     float: none; 
     margin-bottom: 10px; 
 }
