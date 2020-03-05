@@ -16,7 +16,14 @@ namespace Emart.BuyerService.Repositories
 
         public void EditBuyerProfile(Buyer obj)
         {
-            _context.Buyer.Update(obj);
+            Buyer b = new Buyer();
+            b.Username = obj.Username;
+            b.Password = obj.Password;
+            b.Mobilenumber = obj.Mobilenumber;
+            b.Emailid = obj.Emailid;
+            b.Createddatetime = obj.Createddatetime;
+
+            _context.Buyer.Update(b);
             _context.SaveChanges();
         }
 

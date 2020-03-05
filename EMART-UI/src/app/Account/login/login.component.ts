@@ -62,7 +62,7 @@ this.service.BuyerLogin(username,password).subscribe(res=>{token=res;console.log
     this.route.navigateByUrl("buyer")
   }
   else{
-    alert("inavlid");
+    alert("invalid");
   }
 });
 }
@@ -76,7 +76,7 @@ this.service.SellerLogin(username,password).subscribe(res=>{token=res;console.lo
     this.route.navigateByUrl("seller")
   }
   else{
-    alert("inavlid");
+    alert("invalid");
   }
 });
 

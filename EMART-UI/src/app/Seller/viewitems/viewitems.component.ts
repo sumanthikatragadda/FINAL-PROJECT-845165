@@ -32,7 +32,7 @@ export class ViewitemsComponent implements OnInit {
   }
   Delete(id:any)
   {
-    //let id=this.itemform.value["id"];
+
     this.service.Deleteitem(id).subscribe(res=>{
       console.log('record deleted');
     },err=>{

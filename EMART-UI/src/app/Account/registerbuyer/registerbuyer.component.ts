@@ -11,15 +11,16 @@ import { AccountService } from 'src/app/Services/account.service';
 export class RegisterbuyerComponent implements OnInit {
   registerForm:FormGroup;
   submit=false;
-  buyer:Buyer;
+  
   list:Buyer[];
+  buyer:Buyer;
   constructor(private formbuilder:FormBuilder,private service:AccountService) {
 
    }
 
   ngOnInit() {
     this.registerForm=this.formbuilder.group({
-      id:['',Validators.required,Validators],
+      id:[''],
       username:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
        createddatetime:['',Validators.required],
        mobilenumber:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]],
@@ -52,7 +53,7 @@ export class RegisterbuyerComponent implements OnInit {
   AddBuyer()
   {
     this.buyer=new Buyer();
-    this.buyer.id=Number(this.registerForm.value["id"]);
+    this.buyer.id=Math.round(Math.random()*100);
     this.buyer.username=this.registerForm.value["username"];
     this.buyer.password=this.registerForm.value["password"];
     this.buyer.emailid=this.registerForm.value["emailid"];

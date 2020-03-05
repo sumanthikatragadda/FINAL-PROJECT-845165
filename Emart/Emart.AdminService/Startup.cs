@@ -28,7 +28,6 @@ namespace Emart.AdminService
         {
             services.AddDbContext<EmartDBContext>();
             services.AddTransient<IAdminRepository, AdminRepository>();
-            
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>

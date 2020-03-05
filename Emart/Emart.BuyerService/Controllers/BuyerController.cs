@@ -13,6 +13,7 @@ namespace Emart.BuyerService.Controllers
     [ApiController]
     public class BuyerController : ControllerBase
     {
+
         private readonly IBuyerRepository _repo;
         public BuyerController(IBuyerRepository repo)
         {
@@ -20,7 +21,7 @@ namespace Emart.BuyerService.Controllers
         }
         [HttpGet]
         [Route("Getbyid/{id}")]
-        public IActionResult GetSellerProfile(int id)
+        public IActionResult GetBuyerProfile(int id)
         {
             try
             {
@@ -28,7 +29,7 @@ namespace Emart.BuyerService.Controllers
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
             }
         }
         [HttpPut]
@@ -42,7 +43,7 @@ namespace Emart.BuyerService.Controllers
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
             }
         }
     }

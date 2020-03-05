@@ -32,7 +32,7 @@ namespace Emart.AccountService
         {
             services.AddDbContext<EmartDBContext>();
             services.AddTransient<IAccountRepository, AccountRepository>();
-            
+
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>
