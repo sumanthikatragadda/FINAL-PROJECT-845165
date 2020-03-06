@@ -26,7 +26,6 @@ import { DailyreportsComponent } from './Admin/dailyreports/dailyreports.compone
 import { from } from 'rxjs';
 import { HomeComponent } from './Account/home/home.component';
 import { ViewProfileComponent } from './Buyer/view-profile/view-profile.component';
-import { EditProfileComponent } from './Buyer/edit-profile/edit-profile.component';
 import { ViewSellerProfileComponent } from './Seller/view-seller-profile/view-seller-profile.component';
 import { EditSellerProfileComponent } from './Seller/edit-seller-profile/edit-seller-profile.component';
 import { ViewCategoryComponent } from './Admin/view-category/view-category.component';
@@ -55,7 +54,6 @@ import { ViewSubCategoryComponent } from './Admin/view-sub-category/view-sub-cat
     DailyreportsComponent,
     HomeComponent,
     ViewProfileComponent,
-    EditProfileComponent,
     ViewSellerProfileComponent,
     EditSellerProfileComponent,
     ViewCategoryComponent,

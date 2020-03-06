@@ -1,1 +1,52 @@
-<p>search works!</p>
+<style>
+    #id{
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+.box{
+
+    text-align:center;
+}
+.box1{
+ 
+text-align:center;
+}
+tr,td{
+    color: white;
+}
+#bt1{
+    background-color: green;
+}
+#bt2{
+    background-color:orangered;
+}
+  
+
+
+
+</style>
+&nbsp;<br>
+<form id="g" [formGroup]="searchform" >
+    <div class="box">
+        <input type="search" id="search" formControlName="itemname" placeholder="Search" />
+    <button type="button" (click)="search()" >search</button>
+  </div>
+  </form>
+  <section  class="box1" style="align-content: center;">
+    <table class="box" style="background-color:black;">
+        <tr *ngFor="let item of list">
+            <th>{{item.itemname}}</th>
+            
+         
+           
+        </tr>
+        <tr *ngFor="let item of list">
+           <td> <img src='/assets/images/{{item.imagepath}}' style="height:150px; width:150px;"><br>
+         Price: {{item.price}}<br>
+          Name: {{item.itemname}}<br>
+          Stock : {{item.stocknumber}}<br>
+          <button id="bt1" (click)="buy()" >Buy</button><br><br>
+          <button id="bt2">Add To Cart</button></td>
+        </tr>
+    </table>
+  </section>

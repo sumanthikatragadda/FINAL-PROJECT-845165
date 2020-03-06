@@ -37,13 +37,6 @@
                         
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Created Date</label>
-                    <input type="date" formControlName="createddatetime" class="form-control" [ngClass]="{ 'is-invalid': submit && f.createddatetime.errors }" />
-                    <div *ngIf="submit && f.createddatetime.errors" class="invalid-feedback">
-                        <div *ngIf="f.createddatetime.errors.required">Date is required</div>
-                    </div>
-                </div>
                
                 <div class="text-center">
                   <button class="btn btn-primary mr-1">Submit</button>

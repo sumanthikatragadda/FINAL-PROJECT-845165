@@ -11,13 +11,18 @@ const Requestheaders={headers:new HttpHeaders({
 })
 export class BuyerService {
 url:string="http://localhost:63000/Buyer/"
+url1:string="http://localhost:63000/BuyerItem/"
   constructor(private http:HttpClient) { }
-  public GetbyId(id:any):Observable<Buyer[]>
+  public GetbyId(id:any):Observable<Buyer>
   {
-    return this.http.get<Buyer[]>(this.url+'Getbyid/'+id,Requestheaders);
+    return this.http.get<Buyer>(this.url+'Getbyid/'+id,Requestheaders);
   }
   public EditProfile(item:Buyer):Observable<any>
   {
     return this.http.put<Buyer>(this.url+'Edit/',JSON.stringify(item),Requestheaders);
+  }
+  public search(name:string):Observable<any>
+  {
+    return this.http.get(this.url1+'Search/'+name,Requestheaders);
   }
 }

@@ -19,6 +19,7 @@ export class AdditemsComponent implements OnInit {
   item:Items;
   cid:any;
   sub:SubCategory;
+  image:string;
   constructor(private formbuilder:FormBuilder,private service:ItemService) {
    this.sub=new SubCategory();
     this.service.GetAllCategories().subscribe(res=>{
@@ -29,27 +30,31 @@ export class AdditemsComponent implements OnInit {
 
   ngOnInit() {
       this.additemsform=this.formbuilder.group({
-      id:['',Validators.required],
+      id:[''],
       itemname:['',Validators.required],
       price:['',Validators.required],
       description:['',Validators.required],
       stocknumber:['',Validators.required],
       remarks:['',Validators.required],
-      categoryid:['',Validators.required],
-      subcategoryid:['',Validators.required],
+      categoryid:[''],
+      subcategoryid:[''],
+      sellerid:[''],
+      imagepath:['']
     })
   }
   get f(){return this.additemsform.controls;}
   onSubmit()
   {
     this.submitted= true;
-    this.Add();
+   // this.Add();
     //display form value on success
     if(this.additemsform.valid)
     {
-      alert("Success")
-      console.log(JSON.stringify(this.additemsform.value));
+      this.Add();
       
+    }
+    else{
+      console.log("failed");
     }
 
   }
@@ -68,6 +73,9 @@ export class AdditemsComponent implements OnInit {
      this.item.stocknumber=this.additemsform.value["stocknumber"];
      this.item.categoryid=Number(this.additemsform.value["categoryid"]);
      this.item.subcategoryid=Number(this.additemsform.value["subcategoryid"]);
+     this.item.sellerid=Number(localStorage.getItem("id"));
+     this.item.imagepath=this.image;
+     console.log(this.item)
      this.service.AddItems(this.item).subscribe(res=>{
        console.log('Record Added')
      },err=>{
@@ -83,5 +91,9 @@ export class AdditemsComponent implements OnInit {
       console.log(this.sblist);
     })
   }
+  fileEvent(event){
+    this.image = event.target.files[0].name;
+}
+
 
 }

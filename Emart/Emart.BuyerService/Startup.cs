@@ -32,7 +32,7 @@ namespace Emart.BuyerService
             services.AddTransient<IItemRepository, ItemRepository>();
             services.AddDbContext<EmartDBContext>();
             services.AddTransient<ITransactionRepository, TransactionRepository>();
-            
+
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>

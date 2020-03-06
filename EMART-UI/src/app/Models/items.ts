@@ -8,4 +8,5 @@ export class Items {
     categoryid:number;
     subcategoryid:number;
     sellerid:number;
+    imagepath:string;
 }

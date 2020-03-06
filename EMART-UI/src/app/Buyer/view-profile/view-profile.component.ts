@@ -22,19 +22,22 @@ item:Buyer;
        mobilenumber:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]],
        emailid:['',[Validators.required,Validators.email]],
        password:['',Validators.required],
-       createddatetime:['']
-        });
-        let id=localStorage.getItem("id");
-        this.service.GetbyId(id).subscribe(res=>{
       
-          console.log(res);
-          this.viewprofileForm.setValue({
+        });
+        this.viewprofile();
+  }
+  viewprofile()
+  {
+    let id=localStorage.getItem("id");
+        this.service.GetbyId(id).subscribe(res=>{this.item=res;
+          console.log(this.item)
+          this.viewprofileForm.setValue({    
             username:this.item.username,
             mobilenumber:this.item.mobilenumber,
             emailid:this.item.emailid,
-            password:this.item.password
+            password:this.item.password,
           })
-        })
+        });
   }
   onsubmit()
   {
@@ -50,11 +53,11 @@ item:Buyer;
   Update()
   {
     this.item=new Buyer();
+    this.item.id=Number(localStorage.getItem("id"));
     this.item.username=this.viewprofileForm.value["username"];
     this.item.password=this.viewprofileForm.value["password"];
     this.item.emailid=this.viewprofileForm.value["emailid"];
     this.item.mobilenumber=this.viewprofileForm.value["mobilenumber"];
-    this.item.createddatetime=this.viewprofileForm.value["createddatetime"]
     console.log(this.item);
     this.service.EditProfile(this.item).subscribe(res=>{
       console.log('Record Updated')

@@ -1,5 +1,5 @@
 
-<table class="table table-bordered" style="background-color:white">
+<table class="table table-bordered" style="background-color: whitesmoke;">
     <tr>
         <th>Item Id</th>
         <th>Price</th>
@@ -7,8 +7,8 @@
         <th>Description</th>
         <th>StockNumber</th>
         <th>Remarks</th>
-        <th>Category Id</th>
-        <th>SubCategory Id</th>
+       
+        <th>Image</th>
         <th>Edit</th>
         <th>Delete</th>
      </tr>
@@ -19,9 +19,75 @@
        <td>{{item.description}}</td>
        <td>{{item.stockNumber}}</td>
        <td>{{item.remarks}}</td>
-       <td>{{item.categoryId}}</td>
-       <td>{{item.subcategoryId}}</td>
-       <td><button class="btn btn-primary mr-1" (click)="Update()" type="button">Update</button></td>
+       
+       <td><img src='assets/images/{{item.imagepath}}' style="height: 150px; width:150px;"></td>
+       <td><button class="btn btn-primary mr-1" (click)="Edit(item.id)" type="button">Update</button></td>
        <td><button class="btn btn-primary mr-1"  type="button" (click)="Delete(item.id)">Delete</button></td>
     </tr>
 </table>
+<div class="container">
+ 
+  
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">View Items</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+                   <!-- <form *ngFor="let item of list">  -->
+                    <form [formGroup]="itemform">
+                    <div class="form-group">
+                      <label>ID</label><br>
+                      <input type="text" formControlName="id" class="form-control"/>
+                    </div>
+                     <div class="form-group">
+                       <label>ItemName</label>
+                       <input type="text" formControlName="itemName" class="form-control"/>
+                     </div>
+                     <div class="form-group">
+                       <label >Price</label>
+                       <input type="text" formControlName="price"class="form-control" />
+                     </div>
+                     <div class="form-group">
+                       <label>Stock Number</label>
+                       <input type="number" formControlName="stockNumber" class="form-control"  />
+                     </div>
+                     <div class="form-group">
+                       <label >Description</label>
+                       <textarea formControlName="description" class="form-control"  ></textarea>
+                     </div>
+                     <div class="form-group">
+                      <label>Remarks</label>
+                      <textarea formControlName="remarks" class="form-control"  ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Category ID</label><br>
+                      <input type="text" formControlName="categoryId" class="form-control"  readonly /> </div>
+                    <div class="form-group">
+                      <label>SubCategory ID</label><br>
+                      <input type="text" formControlName="subcategoryId" class="form-control" readonly />
+                    </div>
+                    <div class="form-group">
+                      <label>Seller ID</label><br>
+                      <input type="text" formControlName="sellerId" class="form-control"  readonly />
+                    </div>
+                    <!-- </form> -->
+                 
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   <button type="button" class="btn btn-primary" (click)="Update()">Save Changes</button>
+                 </div>
+                    </form>
+                 </div>
+      </div>
+      </div>
+    </div>
+                 </div>

@@ -19,6 +19,7 @@ namespace Emart.SellerService.Models
         public int? CategoryId { get; set; }
         public int? SubcategoryId { get; set; }
         public int? SellerId { get; set; }
+        public string Imagepath { get; set; }
 
         public virtual Category Category { get; set; }
         public virtual Seller Seller { get; set; }

@@ -19,7 +19,7 @@ namespace Emart.SellerService.Controllers
             _repo = repo;
         }
         [HttpGet]
-        [Route("Getbyid/{id}")]
+        [Route("Getsellerbyid/{id}")]
         public IActionResult GetSellerProfile(int id)
         {
             try
@@ -32,7 +32,7 @@ namespace Emart.SellerService.Controllers
             }
         }
         [HttpPut]
-        [Route("Edit")]
+        [Route("Editseller")]
         public IActionResult EditProfile(Seller item)
         {
             try

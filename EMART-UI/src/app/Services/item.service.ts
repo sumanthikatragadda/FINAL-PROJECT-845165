@@ -17,7 +17,7 @@ url:string='http://localhost:63000/SellerItem/'
   constructor(private http:HttpClient) { }
   public AddItems(item:Items):Observable<any>
   {
-    return this.http.post<any>(this.url+'Add',item,Requestheaders);
+    return this.http.post<any>(this.url+'Add',JSON.stringify(item),Requestheaders);
     
   }
   public GetAllItems():Observable<Items[]>
@@ -37,4 +37,13 @@ url:string='http://localhost:63000/SellerItem/'
   {
     return this.http.get<SubCategory[]>(this.url+'GetSubCategories/'+id,Requestheaders);
   }
+  public GetItems(id:any):Observable<any>
+  {
+    return this.http.get<Items[]>(this.url+'GetItems/'+id,Requestheaders);
+  }
+  public Update(item:Items):Observable<any>
+  {
+    return this.http.put<any>(this.url+'Update/',JSON.stringify(item),Requestheaders);
+  }
+
 }

@@ -48,6 +48,18 @@
                         <option *ngFor="let item1 of sblist" value="{{item1.subcategoryId}}">{{item1.subcategoryName}}</option>   
                    </select>
                 </div>
+                <div>
+                    <label>Image</label>
+                    <input type="file" formControlName="imagepath" (change)="fileEvent($event)">
+                    <br><br>
+                    <div *ngFor="let items of item">
+                        <div>
+                            <img src='assets/images/{{items.image}}' style="height: 150px; width:150px;"><br>
+                            Name:{{items.itemname}}
+                        </div>
+                    </div> 
+        
+                </div>
          
     
                 <br>
