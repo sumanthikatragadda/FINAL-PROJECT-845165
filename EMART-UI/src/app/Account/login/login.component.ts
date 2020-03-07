@@ -58,7 +58,7 @@ role:['',Validators.required]
 this.service.BuyerLogin(username,password).subscribe(res=>{token=res;console.log(token)
   if(token.message=="success"){
     localStorage.setItem('token',token.token)
-    localStorage.setItem("id",token.bid.toString());  
+    localStorage.setItem("bid",token.bid.toString());  
     this.route.navigateByUrl("buyer")
   }
   else{
@@ -72,7 +72,7 @@ if(role=='seller')
 this.service.SellerLogin(username,password).subscribe(res=>{token=res;console.log(token)
   if(token.message=="success"){
     localStorage.setItem('token',token.token)
-    localStorage.setItem("id",token.sid.toString());
+    localStorage.setItem("sid",token.sid.toString());
     this.route.navigateByUrl("seller")
   }
   else{

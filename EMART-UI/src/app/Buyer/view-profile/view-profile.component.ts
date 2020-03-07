@@ -28,7 +28,7 @@ item:Buyer;
   }
   viewprofile()
   {
-    let id=localStorage.getItem("id");
+    let id=localStorage.getItem("bid");
         this.service.GetbyId(id).subscribe(res=>{this.item=res;
           console.log(this.item)
           this.viewprofileForm.setValue({    

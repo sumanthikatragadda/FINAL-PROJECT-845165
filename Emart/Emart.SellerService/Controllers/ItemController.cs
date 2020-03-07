@@ -109,7 +109,7 @@ namespace Emart.SellerService.Controllers
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
             }
         }
         [HttpGet]

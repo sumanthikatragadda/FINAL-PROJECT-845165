@@ -2,3 +2,21 @@
 {
    background-image: url("src/assets/images/bg.jpg");
 }
+.card{
+   opacity: 0.5px;
+   background-color: rgba(0, 0, 0, 0.5);
+   margin: 0 auto; 
+   float: none;
+   margin-bottom: 10px; 
+}
+body
+{
+   height:100%;
+}
+label{
+   color: white;
+}
+button
+{
+   align: center;
+}

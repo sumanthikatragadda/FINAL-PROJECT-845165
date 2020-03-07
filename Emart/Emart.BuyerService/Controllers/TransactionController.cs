@@ -19,7 +19,7 @@ namespace Emart.BuyerService.Controllers
             _repo = repo;
         }
         [HttpPost]
-        [Route("Add")]
+        [Route("BuyItem")]
         public IActionResult Add(PurchaseHistory item)
         {
             try
@@ -42,7 +42,7 @@ namespace Emart.BuyerService.Controllers
             }
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                return NotFound(ex.InnerException.Message);
             }
         }
     }

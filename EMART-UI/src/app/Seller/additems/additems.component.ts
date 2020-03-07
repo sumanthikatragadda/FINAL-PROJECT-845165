@@ -46,8 +46,6 @@ export class AdditemsComponent implements OnInit {
   onSubmit()
   {
     this.submitted= true;
-   // this.Add();
-    //display form value on success
     if(this.additemsform.valid)
     {
       this.Add();
@@ -66,14 +64,14 @@ export class AdditemsComponent implements OnInit {
   {
      this.item=new Items();
      this.item.id=Math.round(Math.random()*100);
-     this.item.itemname=this.additemsform.value["itemname"];
+     this.item.itemName=this.additemsform.value["itemname"];
      this.item.price=this.additemsform.value["price"];
      this.item.description=this.additemsform.value["description"];
      this.item.remarks=this.additemsform.value["remarks"];
-     this.item.stocknumber=this.additemsform.value["stocknumber"];
-     this.item.categoryid=Number(this.additemsform.value["categoryid"]);
-     this.item.subcategoryid=Number(this.additemsform.value["subcategoryid"]);
-     this.item.sellerid=Number(localStorage.getItem("id"));
+     this.item.stockNumber=this.additemsform.value["stocknumber"];
+     this.item.categoryId=Number(this.additemsform.value["categoryid"]);
+     this.item.subcategoryId=Number(this.additemsform.value["subcategoryid"]);
+     this.item.sellerId=Number(localStorage.getItem("id"));
      this.item.imagepath=this.image;
      console.log(this.item)
      this.service.AddItems(this.item).subscribe(res=>{

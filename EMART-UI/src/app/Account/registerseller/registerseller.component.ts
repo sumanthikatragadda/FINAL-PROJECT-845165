@@ -18,12 +18,12 @@ export class RegistersellerComponent implements OnInit{
 
   ngOnInit() {
     this.sellerform=this.formbuilder.group({
-      id:['',Validators.required],
+      id:[''],
       username:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
       companyname:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
       briefaboutcompany:['',[Validators.required,]],
-      GSTIN:['',[Validators.required,]],
-      postaladdress:['',[Validators.required,]],
+      gstin:['',[Validators.required,]],
+      postalAddress:['',[Validators.required,]],
       website:['',[Validators.required,]],
        contactnumber:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]],
        emailid:['',[Validators.required,Validators.email]],
@@ -31,10 +31,10 @@ export class RegistersellerComponent implements OnInit{
        
     });
   }
-  get f()
-  {
-    return this.sellerform.controls;
-  }
+  // get f()
+  // {
+  //   return this.sellerform.controls;
+  // }
     onsubmit()
   {
     this.submit=true;
@@ -55,16 +55,16 @@ export class RegistersellerComponent implements OnInit{
   AddSeller()
   {
     this.seller=new Seller();
-    this.seller.id=Number(this.sellerform.value["id"]);
+    this.seller.id=Math.round(Math.random()*100);
     this.seller.username=this.sellerform.value["username"];
     this.seller.password=this.sellerform.value["password"];
     this.seller.emailid=this.sellerform.value["emailid"];
     this.seller.contactnumber=this.sellerform.value["contactnumber"];
     this.seller.companyname=this.sellerform.value["companyname"];
-    this.seller.GSTIN=this.sellerform.value["GSTIN"];
+    this.seller.gstin=this.sellerform.value["gstin"];
     this.seller.briefaboutcompany=this.sellerform.value["briefaboutcompany"];
     this.seller.website=this.sellerform.value["website"];
-    this.seller.postaladdress=this.sellerform.value["postaladdress"];
+    this.seller.postalAddress=this.sellerform.value["postalAddress"];
     console.log(this.seller)
     this.service.AddSeller(this.seller).subscribe(res=>{
       console.log("Record added")

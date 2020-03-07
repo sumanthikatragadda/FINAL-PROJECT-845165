@@ -33,7 +33,7 @@ url:string='http://localhost:63000/SellerItem/'
   {
     return this.http.get<Category[]>(this.url+'GetCategoriesId');
   }
-  public GetAllSubCategories(id:any):Observable<any>
+  public GetAllSubCategories(id:any):Observable<SubCategory[]>
   {
     return this.http.get<SubCategory[]>(this.url+'GetSubCategories/'+id,Requestheaders);
   }
@@ -41,9 +41,9 @@ url:string='http://localhost:63000/SellerItem/'
   {
     return this.http.get<Items[]>(this.url+'GetItems/'+id,Requestheaders);
   }
-  public Update(item:Items):Observable<any>
+  public Update(item:Items):Observable<Items>
   {
-    return this.http.put<any>(this.url+'Update/',JSON.stringify(item),Requestheaders);
+    return this.http.put<Items>(this.url+'Update/',JSON.stringify(item),Requestheaders);
   }
 
 }

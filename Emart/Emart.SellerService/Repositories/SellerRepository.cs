@@ -16,7 +16,17 @@ namespace Emart.SellerService.Repositories
         
         public void EditProfile(Seller obj)
         {
-            _context.Seller.Update(obj); 
+            Seller s = _context.Seller.Find(obj.Id);
+            s.Username = obj.Username;
+            s.Password = obj.Password;
+            s.PostalAddress = obj.PostalAddress;
+            s.Website = obj.Website;
+            s.Gstin = obj.Gstin;
+            s.Emailid = obj.Emailid;
+            s.Companyname = s.Companyname;
+            s.Contactnumber = s.Contactnumber;
+            s.Briefaboutcompany = obj.Briefaboutcompany;
+          //  _context.Seller.Update(obj); 
             _context.SaveChanges();
         }
          public Seller GetSellerProfile(int id)

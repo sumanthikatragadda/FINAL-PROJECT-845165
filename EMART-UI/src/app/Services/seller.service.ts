@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import{HttpClient,HttpHeaders} from '@angular/common/http';
+
 import{Observable} from "Rxjs";
 import { Seller } from '../Models/seller';
 const Requestheaders={headers:new HttpHeaders({
@@ -16,8 +17,8 @@ url:string="http://localhost:63000/Seller/"
   {
     return this.http.get<Seller>(this.url+'Getsellerbyid/'+id,Requestheaders);
   }
-  public EditSellerProfile(item:Seller):Observable<any>
+  public EditSellerProfile(item:Seller):Observable<Seller>
   {
-    return this.http.put<any>(this.url+'Editseller/',JSON.stringify(item),Requestheaders);
+    return this.http.put<Seller>(this.url+'Editseller/',JSON.stringify(item),Requestheaders);
   }
 }

@@ -23,6 +23,15 @@ export class ViewitemsComponent implements OnInit {
     })
   }
   ngOnInit() {
+    this.itemform=this.formbuilder.group({
+      
+      itemName:[''],
+      price:[''],
+      stockNumber:[''],
+      description:[''],
+      remarks:[''],
+
+    })
 
   }
   onsubmit()
@@ -39,39 +48,34 @@ export class ViewitemsComponent implements OnInit {
       console.log(err);
     })
   }
-  Edit(id:string)
+  get f()
+  {
+    return this.itemform.controls;
+  }
+  Edit(id:number)
   {
     this.service.GetItems(id).subscribe(res=>{
       this.item=res;
       console.log(this.item);
-      this.itemform.setValue({
-        id:Number(this.item.id),
-        itemName:this.item.itemname,
+      this.itemform.patchValue({
+        itemName:this.item.itemName,
         price:Number(this.item.price),
-        stockNumber:Number(this.item.stocknumber),
+        stockNumber:Number(this.item.stockNumber),
         description:this.item.description,
-        remarks:this.item.remarks,
-        categoryId:Number(this.item.categoryid),
-        subcategoryId:Number(this.item.subcategoryid),
-        sellerId:Number(this.item.sellerid)
-        
-
+        remarks:this.item.remarks
+      
       })
-    })
+    });
 
 }
 Update()
   {
     this.item=new Items();
-    this.item.id=this.itemform.value["id"];
-     this.item.categoryid=this.itemform.value["categoryId"];
-    this.item.subcategoryid=this.itemform.value["subcategoryId"];
     this.item.price=Number(this.itemform.value["price"]);
-    this.item.itemname=this.itemform.value["itemName"];
+    this.item.itemName=this.itemform.value["itemName"];
     this.item.description=this.itemform.value["description"];
-    this.item.stocknumber=Number(this.itemform.value["stockNumber"]);
+    this.item.stockNumber=Number(this.itemform.value["stockNumber"]);
     this.item.remarks=this.itemform.value["remarks"];
-     this.item.sellerid=this.itemform.value["sellerId"];
     console.log(this.item);
     this.service.Update(this.item).subscribe(res=>
       {

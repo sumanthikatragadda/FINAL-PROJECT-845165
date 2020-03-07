@@ -35,7 +35,7 @@ tr,td{
   <section  class="box1" style="align-content: center;">
     <table class="box" style="background-color:black;">
         <tr *ngFor="let item of list">
-            <th>{{item.itemname}}</th>
+            <th>{{item.itemName}}</th>
             
          
            
@@ -43,9 +43,9 @@ tr,td{
         <tr *ngFor="let item of list">
            <td> <img src='/assets/images/{{item.imagepath}}' style="height:150px; width:150px;"><br>
          Price: {{item.price}}<br>
-          Name: {{item.itemname}}<br>
-          Stock : {{item.stocknumber}}<br>
-          <button id="bt1" (click)="buy()" >Buy</button><br><br>
+          Name: {{item.itemName}}<br>
+          Stock : {{item.stockNumber}}<br>
+          <button id="bt1" (click)="buy(item)" >Buy</button><br><br>
           <button id="bt2">Add To Cart</button></td>
         </tr>
     </table>

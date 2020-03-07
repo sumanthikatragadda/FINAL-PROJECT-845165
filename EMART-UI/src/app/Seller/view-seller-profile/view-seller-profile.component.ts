@@ -18,11 +18,11 @@ export class ViewSellerProfileComponent implements OnInit {
 
   ngOnInit() {
     this.viewsellerform=this.formbuilder.group({
-      username:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
+      username:['',[Validators.required]],
       companyname:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
       briefaboutcompany:['',[Validators.required,]],
-      GSTIN:['',[Validators.required,]],
-      postaladdress:['',[Validators.required,]],
+      gstin:['',[Validators.required,]],
+      postalAddress:['',[Validators.required,]],
       website:['',[Validators.required,]],
        contactnumber:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]],
        emailid:['',[Validators.required,Validators.email]],
@@ -38,16 +38,19 @@ export class ViewSellerProfileComponent implements OnInit {
         emailid:this.seller.emailid,
         password:this.seller.password,
         companyname:this.seller.companyname,
-        gstin:this.seller.GSTIN,
+        gstin:this.seller.gstin,
         contactnumber:this.seller.contactnumber,
         briefaboutcompany:this.seller.briefaboutcompany,
-        postaladdress:this.seller.postaladdress,
+        postalAddress:this.seller.postalAddress,
         website:this.seller.website,
       })
     });
     
   }
-  
+  get f()
+  {
+    return this.viewsellerform.controls;
+  }
   onsubmit()
   {
     console.log("hii")
@@ -56,22 +59,23 @@ export class ViewSellerProfileComponent implements OnInit {
     {
       this.Update();
       alert("form is validated");
-      console.log(JSON.stringify(this.viewsellerform.value));
+  
     }
     
   }
   Update()
   {
     this.seller=new Seller();
+    this.seller.id=Number(localStorage.getItem("sid"));
     this.seller.username=this.viewsellerform.value["username"];
     this.seller.password=this.viewsellerform.value["password"];
     this.seller.emailid=this.viewsellerform.value["emailid"];
     this.seller.contactnumber=this.viewsellerform.value["contactnumber"];
     this.seller.companyname=this.viewsellerform.value["companyname"];
-    this.seller.GSTIN=this.viewsellerform.value["GSTIN"];
+    this.seller.gstin=this.viewsellerform.value["gstin"];
     this.seller.briefaboutcompany=this.viewsellerform.value["briefaboutcompany"];
     this.seller.website=this.viewsellerform.value["website"];
-    this.seller.postaladdress=this.viewsellerform.value["postaladdress"];
+    this.seller.postalAddress=this.viewsellerform.value["postalAddress"];
     console.log(this.seller)
     this.service.EditSellerProfile(this.seller).subscribe(res=>{
       console.log("Record updated")

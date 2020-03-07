@@ -1,2 +1,47 @@
-
-<p>buyproduct works!</p>
+<div class="card" style="width: 25rem;">
+<form class="border border-light p-5" [formGroup]="buyproductform" >    
+    <div class="form-group">
+        <label>Item Name</label>
+        <input type="text" formControlName="itemName" class="form-control" readonly/>
+      </div>
+      <div class="form-group">
+        <label>Number Of Items</label>
+        <input type="text" formControlName="numberofitems" class="form-control" autofocus/>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" formControlName="datetime" class="form-control"/>
+      </div>
+    <div class="form-group">
+        <label>Choose Payment Mode</label>
+        <select formControlName="transactiontype">
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <option value="cod">Cash On Delivery</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Card Number</label>
+        <input type="text" formControlName="cardnumber" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>CVV</label>
+        <input type="number" formControlName="CVV" class="form-control" style="width: 30%;"/>
+      </div>
+      <div class="form-group">
+        <label>ExpiryDate</label>
+        <input type="date" formControlName="ed" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Card Holders Name</label>
+        <input type="text" formControlName="name" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Remarks</label>
+        <input type="text" formControlName="remarks" class="form-control"/>
+      </div>
+         <div class="text-center">
+        <button type="submit" class="btn btn-primary mr-1" (click)=" purchase()">Purchase</button>
+         </div>
+</form>
+</div>

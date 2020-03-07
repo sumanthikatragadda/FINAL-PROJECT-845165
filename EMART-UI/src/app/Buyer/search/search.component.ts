@@ -39,8 +39,8 @@ ViewItems()
 search()
 {
   this.items=new Items();
-  this.items.itemname=this.searchform.value["itemname"];
-  this.service.search(this.items.itemname).subscribe(res=>{
+  this.items.itemName=this.searchform.value["itemname"];
+  this.service.search(this.items.itemName).subscribe(res=>{
     this.list=res;
     console.log(this.list);
  
@@ -49,8 +49,10 @@ search()
     console.log(err);
   })
 }
-buy()
+buy(item2:Items)
 {
+  console.log(item2);
+  localStorage.setItem('item1',JSON.stringify(item2));
   this.router.navigateByUrl('buyer/buyproduct');
   
 }
