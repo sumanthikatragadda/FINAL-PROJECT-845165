@@ -26,28 +26,28 @@ url:string='http://localhost:63000/Admin/'
   }
   public GetAllCategories():Observable<Category[]>
   {
-    return this.http.get<Category[]>(this.url+'GetCategories');
+    return this.http.get<Category[]>(this.url+'GetAllCategories');
   }
   public DeleteCategory(id:any):Observable<any>
   {
-    return this.http.delete<any>(this.url+'DeleteCat/'+id,Requestheaders);
+    return this.http.delete<any>(this.url+'DeleteCategory/'+id,Requestheaders);
     
   }
   public GetAllSubCategories():Observable<SubCategory[]>
   {
-    return this.http.get<SubCategory[]>(this.url+'GetSubCategories');
+    return this.http.get<SubCategory[]>(this.url+'GetAllSubCategories');
   }
   public DeleteSubCategory(id:any):Observable<any>
   {
-    return this.http.delete<any>(this.url+'DeleteSub/'+id,Requestheaders);
+    return this.http.delete<any>(this.url+'DeleteSubCategory/'+id,Requestheaders);
     
   }
   public GetCategoryId(id:any):Observable<Category[]>
   {
-    return this.http.get<Category[]>(this.url+'GetCategory/'+id,Requestheaders);
+    return this.http.get<Category[]>(this.url+'GetCategorybyid/'+id,Requestheaders);
   }
   public GetSubCategoryId(id:any):Observable<Category[]>
   {
-    return this.http.get<Category[]>(this.url+'GetSubCategory/'+id,Requestheaders);
+    return this.http.get<Category[]>(this.url+'GetSubCategorybyid/'+id,Requestheaders);
   }
 }

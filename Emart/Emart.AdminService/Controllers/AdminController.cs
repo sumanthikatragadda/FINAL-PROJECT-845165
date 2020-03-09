@@ -31,12 +31,12 @@ namespace Emart.AdminService.Controllers
             _repo.AddSubcategory(obj);
         }
         [HttpGet]
-        [Route("GetCategories")]
+        [Route("GetAllCategories")]
         public IActionResult GetAllCategories()
         {
             try
             {
-                return Ok(_repo.GetCategories());
+                return Ok(_repo.GetAllCategories());
             }
             catch (Exception ex)
             {
@@ -44,12 +44,12 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpGet]
-        [Route("GetSubCategories")]
+        [Route("GetAllSubCategories")]
         public IActionResult GetAllSubCategories()
         {
             try
             {
-                return Ok(_repo.GetSubCategories());
+                return Ok(_repo.GetAllSubCategories());
             }
             catch (Exception ex)
             {
@@ -57,7 +57,7 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpDelete]
-        [Route("DeleteCat/{id}")]
+        [Route("DeleteCategory/{id}")]
         public IActionResult DeleteCategory(int id)
         {
             try
@@ -71,7 +71,7 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpDelete]
-        [Route("DeleteSub/{id}")]
+        [Route("DeleteSubCategory/{id}")]
         public IActionResult DeleteSubCategory(int id)
         {
             try
@@ -85,7 +85,7 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpPut]
-        [Route("UpdateCat")]
+        [Route("UpdateCategory")]
         public IActionResult UpdateCategory(Category item)
         {
             try
@@ -99,7 +99,7 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpPut]
-        [Route("UpdateSub")]
+        [Route("UpdateSubCategory")]
         public IActionResult Update(SubCategory item)
         {
             try
@@ -113,12 +113,12 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpGet]
-        [Route("GetCategory/{id}")]
+        [Route("GetCategorybyid/{id}")]
         public IActionResult GetCategory(int id)
         {
             try
             {
-                return Ok(_repo.GetCategoryId(id));
+                return Ok(_repo.GetCategorybyId(id));
             }
             catch (Exception ex)
             {
@@ -126,12 +126,12 @@ namespace Emart.AdminService.Controllers
             }
         }
         [HttpGet]
-        [Route("GetSubCategory/{id}")]
+        [Route("GetSubCategorybyid/{id}")]
         public IActionResult GetSubCategory(int id)
         {
             try
             {
-                return Ok(_repo.GetSubCategoryId(id));
+                return Ok(_repo.GetSubCategorybyId(id));
             }
             catch (Exception ex)
             {

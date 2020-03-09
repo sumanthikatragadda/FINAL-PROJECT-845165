@@ -31,7 +31,7 @@ url:string='http://localhost:63000/SellerItem/'
   }
   public GetAllCategories():Observable<Category[]>
   {
-    return this.http.get<Category[]>(this.url+'GetCategoriesId');
+    return this.http.get<Category[]>(this.url+'GetAllCategories');
   }
   public GetAllSubCategories(id:any):Observable<SubCategory[]>
   {

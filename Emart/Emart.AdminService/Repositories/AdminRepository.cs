@@ -41,22 +41,22 @@ namespace Emart.AdminService.Repositories
             _context.SaveChanges();
         }
 
-        public List<Category> GetCategories()
+        public List<Category> GetAllCategories()
         {
             return _context.Category.ToList();
         }
 
-        public Category GetCategoryId(int id)
+        public Category GetCategorybyId(int id)
         {
             return _context.Category.Find(id);
         }
 
-        public List<SubCategory> GetSubCategories()
+        public List<SubCategory> GetAllSubCategories()
         {
             return _context.SubCategory.ToList();
         }
 
-        public SubCategory GetSubCategoryId(int id)
+        public SubCategory GetSubCategorybyId(int id)
         {
             return _context.SubCategory.Find(id);
         }
