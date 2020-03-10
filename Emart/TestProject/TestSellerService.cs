@@ -41,7 +41,7 @@ namespace TestProject
         {
             _repo1.AddItems(new Items()
             {
-                Id = 2,
+                Id = 3,
                 ItemName = "pen",
                 CategoryId = 72,
                 SubcategoryId = 5,
@@ -52,8 +52,8 @@ namespace TestProject
                 SellerId = 1,
                 Remarks = "good"
             });
-            //var result = _repo1.Getitem(999);
-            //Assert.NotNull(result);
+            var result = _repo1.GetItems(3);
+            Assert.NotNull(result);
 
         }
         [Test]
@@ -76,8 +76,8 @@ namespace TestProject
         [Description("to test Delete Item")]
         public void TestDeleteItems()
         {
-            _repo1.DeleteItems(91);
-            var x = _repo1.GetItems(91);
+            _repo1.DeleteItems(3);
+            var x = _repo1.GetItems(3);
             Assert.Null(x);
         }
         [Test]

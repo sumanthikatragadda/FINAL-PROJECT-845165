@@ -3,14 +3,14 @@
         <th>Category Id</th>
         <th>Category Name</th>
         <th>Brief Details</th>
-        <th>Edit</th>
+        
         <th>Delete</th>
      </tr>
     <tr *ngFor="let item of list">
        <td>{{item.categoryId}}</td>
        <td>{{item.categoryName}}</td>
        <td>{{item.briefDetails}}</td>
-        <td><button class="btn btn-primary mr-1" (click)="Update()" type="button">Update</button></td>
+        <!-- <td><button class="btn btn-primary mr-1" (click)="Update()" type="button">Update</button></td> -->
        <td><button class="btn btn-primary mr-1" (click)="Delete(item.categoryId)" type="button">Delete</button></td>
     </tr>
 </table>

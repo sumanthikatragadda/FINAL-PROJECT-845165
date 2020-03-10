@@ -23,7 +23,7 @@ namespace TestProject
         {
             _repo.AddCategory(new Category()
             {
-                CategoryId = 1,
+                CategoryId = 2,
                 CategoryName = "Kids",
                 BriefDetails = "products"
 
@@ -36,7 +36,7 @@ namespace TestProject
         {
             _repo.AddSubcategory(new SubCategory()
             {
-                SubcategoryId=1,
+                SubcategoryId=3,
                 CategoryId = 1,
                 SubcategoryName = "Kids",
                 BriefDetails = "products",
@@ -77,8 +77,8 @@ namespace TestProject
         [Description("to test Delete Category")]
         public void TestDeleteCategory()
         {
-            _repo.DeleteCategory(72);
-            var x = _repo.GetCategorybyId(72);
+            _repo.DeleteCategory(2);
+            var x = _repo.GetCategorybyId(2);
             Assert.Null(x);
         }
         [Test]

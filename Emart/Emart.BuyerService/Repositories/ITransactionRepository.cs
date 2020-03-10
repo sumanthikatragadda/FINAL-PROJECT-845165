@@ -10,5 +10,8 @@ namespace Emart.BuyerService.Repositories
     {
         public void BuyItem(PurchaseHistory item);
         List<PurchaseHistory> TransactionHistory(int id);
+        List<Cart> GetCart();
+        public void AddtoCart(Cart item);
+        public void DeleteCart(int id);
     }
 }

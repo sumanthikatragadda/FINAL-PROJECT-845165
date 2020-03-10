@@ -30,6 +30,9 @@ list:SubCategory[];
       console.log(err);
     })
   }
-
+Update()
+{
+  
+}
 
 }

@@ -30,7 +30,7 @@ export class ViewSellerProfileComponent implements OnInit {
        
     });
     console.log("hii")
-    let id=localStorage.getItem("id");
+    let id=localStorage.getItem("sid");
     this.service.GetSellerbyId(id).subscribe(res=>{this.seller=res;
       console.log(this.seller)
       this.viewsellerform.setValue({ 

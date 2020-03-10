@@ -46,7 +46,7 @@ tr,td{
           Name: {{item.itemName}}<br>
           Stock : {{item.stockNumber}}<br>
           <button id="bt1" (click)="buy(item)" >Buy</button><br><br>
-          <button id="bt2">Add To Cart</button></td>
+          <button id="bt2" (click)="AddToCart(item)">Add To Cart</button></td>
         </tr>
     </table>
   </section>

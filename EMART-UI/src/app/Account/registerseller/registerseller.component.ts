@@ -31,10 +31,10 @@ export class RegistersellerComponent implements OnInit{
        
     });
   }
-  // get f()
-  // {
-  //   return this.sellerform.controls;
-  // }
+  get f()
+  {
+    return this.sellerform.controls;
+  }
     onsubmit()
   {
     this.submit=true;

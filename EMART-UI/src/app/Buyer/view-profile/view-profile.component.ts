@@ -50,10 +50,14 @@ item:Buyer;
     }
     
   }
+  get f()
+  {
+    return this.viewprofileForm.controls;
+  }
   Update()
   {
     this.item=new Buyer();
-    this.item.id=Number(localStorage.getItem("id"));
+    this.item.id=Number(localStorage.getItem("bid"));
     this.item.username=this.viewprofileForm.value["username"];
     this.item.password=this.viewprofileForm.value["password"];
     this.item.emailid=this.viewprofileForm.value["emailid"];

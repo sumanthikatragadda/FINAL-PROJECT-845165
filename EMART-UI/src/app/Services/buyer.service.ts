@@ -3,6 +3,7 @@ import{HttpClient,HttpHeaders} from '@angular/common/http';
 import{Observable} from "Rxjs";
 import { Buyer } from '../Models/buyer';
 import { PurchaseHistory } from '../Models/purchase-history';
+import { Cart } from '../Models/cart';
 const Requestheaders={headers:new HttpHeaders({
   'Content-Type':'application/json',
 
@@ -38,4 +39,19 @@ url2:string="http://localhost:63000/BuyerTransaction/"
     return this.http.get<PurchaseHistory>(this.url2+'TransactionHistory/'+id,Requestheaders);
     
   }
+  public Addtocart(item:Cart):Observable<Cart>
+  {
+    return this.http.post<Cart>(this.url2+'AddToCart/',JSON.stringify(item),Requestheaders);
+    
+  }
+  public GetCart():Observable<Cart[]>
+  {
+    return this.http.get<Cart[]>(this.url2+'GetCart');
+  }
+  public DeleteCart(id:any):Observable<any>
+  {
+    return this.http.delete<any>(this.url+'DeleteCart/'+id,Requestheaders);
+    
+  }
+
 }

@@ -71,7 +71,7 @@ export class AdditemsComponent implements OnInit {
      this.item.stockNumber=this.additemsform.value["stocknumber"];
      this.item.categoryId=Number(this.additemsform.value["categoryid"]);
      this.item.subcategoryId=Number(this.additemsform.value["subcategoryid"]);
-     this.item.sellerId=Number(localStorage.getItem("id"));
+     this.item.sellerId=Number(localStorage.getItem("sid"));
      this.item.imagepath=this.image;
      console.log(this.item)
      this.service.AddItems(this.item).subscribe(res=>{
