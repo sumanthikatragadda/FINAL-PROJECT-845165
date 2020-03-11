@@ -36,7 +36,7 @@ namespace TestProject
         {
             _repo.AddSubcategory(new SubCategory()
             {
-                SubcategoryId=3,
+                SubcategoryId=4,
                 CategoryId = 1,
                 SubcategoryName = "Kids",
                 BriefDetails = "products",

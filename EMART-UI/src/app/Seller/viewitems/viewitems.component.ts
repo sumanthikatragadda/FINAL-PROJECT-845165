@@ -30,15 +30,12 @@ export class ViewitemsComponent implements OnInit {
       stockNumber:[''],
       description:[''],
       remarks:[''],
+      
 
     })
 
   }
-  onsubmit()
-  {
-    this.submitted=true;
-    
-  }
+ 
   Delete(id:any)
   {
 
@@ -70,7 +67,8 @@ export class ViewitemsComponent implements OnInit {
 }
 Update()
   {
-    this.item=new Items();
+  
+    this.item.sellerId=Number(localStorage.getItem("sid"));
     this.item.price=Number(this.itemform.value["price"]);
     this.item.itemName=this.itemform.value["itemName"];
     this.item.description=this.itemform.value["description"];

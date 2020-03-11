@@ -117,7 +117,7 @@ namespace TestProject
         [Description("to test Delete Item from cart")]
         public void TestDeleteCart()
         {
-            _repo3.DeleteCart(1);
+            _repo3.DeleteCart(2);
            
         }
 

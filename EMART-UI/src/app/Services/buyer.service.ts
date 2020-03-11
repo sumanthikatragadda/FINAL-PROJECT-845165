@@ -50,7 +50,7 @@ url2:string="http://localhost:63000/BuyerTransaction/"
   }
   public DeleteCart(id:any):Observable<any>
   {
-    return this.http.delete<any>(this.url+'DeleteCart/'+id,Requestheaders);
+    return this.http.delete<any>(this.url2+'DeleteCart/'+id,Requestheaders);
     
   }
 
