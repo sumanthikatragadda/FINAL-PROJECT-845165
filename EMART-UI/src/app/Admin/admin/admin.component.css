@@ -21,6 +21,9 @@
   .navbar a.active {
   background-color: lightcoral;
   } 
-  
+  #log
+  {
+    cursor: pointer;
+  }
   
   
