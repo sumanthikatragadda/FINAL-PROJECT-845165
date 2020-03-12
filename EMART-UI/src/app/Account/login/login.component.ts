@@ -39,8 +39,7 @@ role:['',Validators.required]
     if(this.loginForm.valid)
     {
       this.Validate();
-      alert("form is validated");
-      console.log(JSON.stringify(this.loginForm.value))
+      
     }
     //this.Validate();
     
@@ -81,8 +80,11 @@ this.service.SellerLogin(username,password).subscribe(res=>{token=res;console.lo
 });
 
 }
+if(role=='admin')
 if(username=="Admin" && password=="admin")
 {
+  
+  localStorage.setItem("Admin",username);
   this.route.navigateByUrl("admin");
  }
 

@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 })
 export class SellerComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private route:Router) {
+    if(localStorage.getItem("sid"))
+    {
+         
+    }
+    else{
+      this.route.navigateByUrl("home/login")
+    }
+   }
 
   ngOnInit() {
   }

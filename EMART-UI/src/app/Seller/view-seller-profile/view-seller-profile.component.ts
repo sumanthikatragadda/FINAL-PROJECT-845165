@@ -19,7 +19,7 @@ export class ViewSellerProfileComponent implements OnInit {
   ngOnInit() {
     this.viewsellerform=this.formbuilder.group({
       username:['',[Validators.required]],
-      companyname:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
+      companyname:['',[Validators.required]],
       briefaboutcompany:['',[Validators.required,]],
       gstin:['',[Validators.required,]],
       postalAddress:['',[Validators.required,]],
@@ -29,7 +29,6 @@ export class ViewSellerProfileComponent implements OnInit {
        password:['',[Validators.required]]
        
     });
-    console.log("hii")
     let id=localStorage.getItem("sid");
     this.service.GetSellerbyId(id).subscribe(res=>{this.seller=res;
       console.log(this.seller)
@@ -58,7 +57,7 @@ export class ViewSellerProfileComponent implements OnInit {
     if(this.viewsellerform.valid)
     {
       this.Update();
-      alert("form is validated");
+      
   
     }
     

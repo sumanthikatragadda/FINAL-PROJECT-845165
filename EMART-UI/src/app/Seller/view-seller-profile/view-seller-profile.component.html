@@ -18,12 +18,12 @@
                     <input type="text" formControlName="companyname" class="form-control" [ngClass]="{ 'is-invalid': submit && f.companyname.errors }" />
                     <div *ngIf="submit && f.companyname.errors" class="invalid-feedback">
                         <div *ngIf="f.companyname.errors.required">Company Name is required</div>
-                        <div *ngIf="f.companyname.errors.pattern">Enter only alphabets</div>
+
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Brief about company</label>
-                    <input type="text" formControlName="briefaboutcompany" class="form-control" [ngClass]="{ 'is-invalid': submit && f.briefaboutcompany.errors }" />
+                    <textarea formControlName="briefaboutcompany" class="form-control" [ngClass]="{ 'is-invalid': submit && f.briefaboutcompany.errors }" ></textarea>
                     <div *ngIf="submit && f.briefaboutcompany.errors" class="invalid-feedback">
                         <div *ngIf="f.briefaboutcompany.errors.required">Details required</div>
                         
@@ -73,7 +73,7 @@
             </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="text" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submit && f.password.errors }" />
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submit && f.password.errors }" />
                     <div *ngIf="submit && f.password.errors" class="invalid-feedback">
                         <div *ngIf="f.password.errors.required">Password is required</div>
                         
@@ -81,7 +81,7 @@
                 </div>
                
                 <div class="text-center">
-                  <button class="btn btn-primary mr-1">Submit</button>
+                  <button class="btn btn-primary mr-1">Edit Profile</button>
                 
                 </div>
         </form>

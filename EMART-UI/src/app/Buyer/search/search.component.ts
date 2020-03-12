@@ -78,7 +78,7 @@ AddToCart(item2:Items){
  console.log(this.cart);
  this.service.Addtocart(this.cart).subscribe(res=>{
    console.log("Record added To Cart");
-   alert('Item has been Added To Cart');
+   
  })
 }
 

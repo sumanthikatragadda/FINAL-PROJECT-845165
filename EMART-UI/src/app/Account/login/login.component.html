@@ -39,15 +39,15 @@
           </div>
 
           <!-- Password -->
-          <input type="text"  class="form-control mb-4" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submit && f.password.errors }">
+          <input type="password"  class="form-control mb-4" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submit && f.password.errors }">
           <div *ngIf="submit && f.password.errors" class="invalid-feedback">
           <div *ngIf="f.password.errors.required">Password is required</div>
           </div>
           <p style="font-size: 25px;">Login:</p>
           Buyer<input type="radio" formControlName="role" value="buyer">
-          <br>
+          &nbsp;
           Seller<input type="radio" formControlName="role" value="seller">
-          <br>
+          &nbsp;
           Admin<input type="radio" formControlName="role" value="admin">
          <br>
          <button class=" btn btn-primary"type="submit">Sign in</button>

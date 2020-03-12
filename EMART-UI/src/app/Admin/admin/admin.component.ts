@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private route:Router) { 
+    if(localStorage.getItem("Admin"))
+    {
+
+    }
+    else{
+      this.route.navigateByUrl("home/login")
+    }
+  }
 
   ngOnInit() {
   }

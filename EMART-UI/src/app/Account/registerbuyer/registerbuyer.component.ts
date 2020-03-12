@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Buyer } from 'src/app/Models/buyer';
 import { AccountService } from 'src/app/Services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registerbuyer',
@@ -14,7 +15,7 @@ export class RegisterbuyerComponent implements OnInit {
   
   list:Buyer[];
   buyer:Buyer;
-  constructor(private formbuilder:FormBuilder,private service:AccountService) {
+  constructor(private formbuilder:FormBuilder,private service:AccountService,private route:Router) {
 
    }
 
@@ -39,9 +40,7 @@ export class RegisterbuyerComponent implements OnInit {
     if(this.registerForm.valid)
     {
       this.AddBuyer();
-    alert("form is validated");
-    
-    console.log(JSON.stringify(this.registerForm.value))
+       this.route.navigateByUrl("home/login");
     }
     
   }

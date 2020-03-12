@@ -34,8 +34,7 @@ export class AddcategoryComponent implements OnInit {
     if(this.addcategoryform.valid)
     {
       this.Add();
-      alert("Success")
-      console.log(JSON.stringify(this.addcategoryform.value));
+     
       
     }
 

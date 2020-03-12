@@ -5,16 +5,15 @@
         <th>Brief Details</th>
         <th>GST</th>
         <th>Category Id</th>
-        <th>Edit</th>
         <th>Delete</th>
      </tr>
     <tr *ngFor="let item of list">
        <td>{{item.subcategoryId}}</td>
        <td>{{item.subcategoryName}}</td>
        <td>{{item.briefDetails}}</td>
-       <td>{{item.GST}}</td>
+       <td>{{item.gst}}</td>
        <td>{{item.categoryId}}</td>
-        <td><button class="btn btn-primary mr-1" (click)="Update()" type="button">Update</button></td>
+        <!-- <td><button class="btn btn-primary mr-1" (click)="Update()" type="button">Update</button></td> -->
        <td><button class="btn btn-primary mr-1" (click)="Delete(item.categoryId)" type="button">Delete</button></td>
     </tr>
 </table>

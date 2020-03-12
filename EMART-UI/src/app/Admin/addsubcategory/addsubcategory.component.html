@@ -24,7 +24,7 @@
 
             
                     <label>Brief Details</label>
-                    <input type="text" formControlName="briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.briefdetails.errors }" />
+                    <textarea formControlName="briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.briefdetails.errors }" ></textarea>
                     <div *ngIf="submitted && f.briefdetails.errors" class="invalid-feedback">
                         <div *ngIf="f.briefdetails.errors.required">Brief Details is required</div>
                     </div>

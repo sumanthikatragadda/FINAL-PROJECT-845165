@@ -33,7 +33,7 @@ Remove(id:any)
 console.log(id);
 this.service.DeleteCart(id).subscribe(res=>{
   console.log('Item Removed from Cart');
-  alert('Item Removed from Cart');
+  
 })
 }
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Seller } from 'src/app/Models/seller';
 import { AccountService } from 'src/app/Services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registerseller',
@@ -14,13 +15,13 @@ export class RegistersellerComponent implements OnInit{
   submit=false;
   seller:Seller;
   list:Seller[];
-  constructor(private formbuilder:FormBuilder,private service:AccountService) { }
+  constructor(private formbuilder:FormBuilder,private service:AccountService,private route:Router) { }
 
   ngOnInit() {
     this.sellerform=this.formbuilder.group({
       id:[''],
       username:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
-      companyname:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
+      companyname:['',[Validators.required]],
       briefaboutcompany:['',[Validators.required,]],
       gstin:['',[Validators.required,]],
       postalAddress:['',[Validators.required,]],
@@ -41,9 +42,7 @@ export class RegistersellerComponent implements OnInit{
     if(this.sellerform.valid)
     {
       this.AddSeller();
-    alert("form is validated");
-    
-    console.log(JSON.stringify(this.sellerform.value))
+      this.route.navigateByUrl("home/login");
     }
     
   }

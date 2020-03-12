@@ -24,15 +24,12 @@ list:SubCategory[];
   Delete(id:any)
   {
    
-    this.service.DeleteCategory(id).subscribe(res=>{
+    this.service.DeleteSubCategory(id).subscribe(res=>{
       console.log('Record Deleted');
     },err=>{
       console.log(err);
     })
   }
-Update()
-{
-  
-}
+
 
 }

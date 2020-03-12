@@ -23,12 +23,7 @@ export class ViewCategoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.viewform=this.formbuilder.group({
-    //   categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-    //   categoryname:['',Validators.required],
-    //   briefdetails:['',Validators.required],
-     
-    //   })
+    
   }
   // Update()
   // {

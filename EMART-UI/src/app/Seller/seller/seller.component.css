@@ -1,9 +1,9 @@
 #b{
-    background-image: url("src/assets/images/bg1.jpg");
+    background-image: url("src/assets/images/img2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 900px;
+    height: 1200px;
   }
   .dropdown-menu
   {
@@ -24,7 +24,7 @@
   .table
   {
     
-    color: white;
+    background-color: rgba(0, 0,0, 0.5);
   }
   #log
 {
